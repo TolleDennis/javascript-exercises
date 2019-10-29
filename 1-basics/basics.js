@@ -192,10 +192,11 @@ describe("basics", function() {
 
     describe("Create a new reference to the same array", function() {
         it("should run without errors", function() {
-            const firstArray = [1, 2, 3];
+            const firstArray = [1, 2, 3,];
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
+            const secondArray = firstArray;
 
             ////////////////////////////////////////////////////////////////////
 
