@@ -56,7 +56,7 @@ describe("basics", function() {
         it("should run without errors", function() {
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-            
+            let someVariable = undefined;
 
             ////////////////////////////////////////////////////////////////////
 
