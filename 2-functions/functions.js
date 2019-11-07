@@ -76,12 +76,12 @@ describe("functions", function() {
             // Declare a constant 'answer' with the correct result.
             // If you call getContext() here, you're a cheater! :)
             // ✏️ ADD CODE HERE ✏️
-            const answer = getContextv();
+            const answer = getContext();
 
             ////////////////////////////////////////////////////////////////////
 
             const result = getContext(); // <--- called without explicit context
-
+ 
             if (answer !== result) {
                 throw new Error("Wrong answer :(");
             }
@@ -101,7 +101,8 @@ describe("functions", function() {
             // and 'answerThirdResult' with the correct results.
             // If you call getContext() here, you're a cheater! :)
             // ✏️ ADD CODE HERE ✏️
-
+            const answerFirstResult = object
+            const answerSecondResult = differentObject
             ////////////////////////////////////////////////////////////////////
 
             // First we call the function without an explicit context
