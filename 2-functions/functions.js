@@ -14,7 +14,7 @@ describe("functions", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-            function myFunction(){}
+            function myFunction() {}
 
             ////////////////////////////////////////////////////////////////////
         });
@@ -28,7 +28,7 @@ describe("functions", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-            const myFunction =() => {}
+            const myFunction = () => {}
 
             ////////////////////////////////////////////////////////////////////
 
@@ -81,7 +81,7 @@ describe("functions", function() {
             ////////////////////////////////////////////////////////////////////
 
             const result = getContext(); // <--- called without explicit context
- 
+
             if (answer !== result) {
                 throw new Error("Wrong answer :(");
             }
@@ -101,8 +101,9 @@ describe("functions", function() {
             // and 'answerThirdResult' with the correct results.
             // If you call getContext() here, you're a cheater! :)
             // ✏️ ADD CODE HERE ✏️
-            const answerFirstResult = object
-            const answerSecondResult = differentObject
+            const answerFirstResult = undefined;
+            const answerSecondResult = context;
+            const answerThirdResult = undefined;
             ////////////////////////////////////////////////////////////////////
 
             // First we call the function without an explicit context
@@ -324,7 +325,7 @@ describe("functions", function() {
             if (typeof result !== "function") {
                 throw new Error(
                     "myFunction() did not return a function, instead saw " +
-                        typeof result
+                    typeof result
                 );
             }
         });
@@ -343,7 +344,7 @@ describe("functions", function() {
             if (result !== myFunction) {
                 throw new Error(
                     "myFunction() did not return a reference to itself, instead saw " +
-                        typeof result
+                    typeof result
                 );
             }
         });
@@ -488,19 +489,19 @@ describe("functions", function() {
             if (calls[0] !== "element = A, index = 0") {
                 throw new Error(
                     "The given function 'fn' should be called with element = A, index = 0 during the first iteration but has been called with " +
-                        calls[0]
+                    calls[0]
                 );
             }
             if (calls[1] !== "element = B, index = 1") {
                 throw new Error(
                     "The given function 'fn' should be called with element = B, index = 1 during the second iteration but has been called with " +
-                        calls[1]
+                    calls[1]
                 );
             }
             if (calls[2] !== "element = C, index = 2") {
                 throw new Error(
                     "The given function 'fn' should be called with element = C, index = 2 during the third iteration but has been called with " +
-                        calls[2]
+                    calls[2]
                 );
             }
         });
@@ -543,28 +544,27 @@ describe("functions", function() {
             results = map(
                 function(element, index) {
                     return "element = " + element + ", index = " + index;
-                },
-                ["A", "B", "C"]
+                }, ["A", "B", "C"]
             );
             if (results[0] !== "element = A, index = 0") {
                 throw new Error(
                     "The result of the first iteration should be 'element = A, index = 0' but was '" +
-                        results[0] +
-                        "'"
+                    results[0] +
+                    "'"
                 );
             }
             if (results[1] !== "element = B, index = 1") {
                 throw new Error(
                     "The result of the second iteration should be 'element = B, index = 1' but was '" +
-                        results[1] +
-                        "'"
+                    results[1] +
+                    "'"
                 );
             }
             if (results[2] !== "element = C, index = 2") {
                 throw new Error(
                     "The result of the third iteration should be 'element = C, index = 2' but was '" +
-                        results[2] +
-                        "'"
+                    results[2] +
+                    "'"
                 );
             }
         });
@@ -699,4 +699,4 @@ describe("functions", function() {
             }
         });
     });
-});
+})
