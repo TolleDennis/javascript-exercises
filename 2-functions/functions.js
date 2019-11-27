@@ -638,13 +638,12 @@ describe("functions", function() {
 
             // Now we're registering the service.handleEvent method so that
             // it will be called as soon as the event is emitted.
-            eventEmitter.addEventListener(service.handleEvent);
+            eventEmitter.addEventListener(service.handleEvent.bind(service));
             // Now let's emit the event. However, this will fail.
             // Find the reason why and fix it.
             eventEmitter.emit();
         });
     });
-
     describe("Removing an event listener that has been created with .bind()", () => {
         it("should run without errors", function() {
             // This is our example event listener again. This time, it provides a
@@ -677,8 +676,8 @@ describe("functions", function() {
                 }
             };
 
-            // Now this time we've done it right: we .bind() the event handler before passing it to addEventListener().
-            eventEmitter.addEventListener(service.handleEvent.bind(service));
+            service.handleEvent = service.handleEvent.bind(service);
+            eventEmitter.addEventListener(service.handleEvent);
             // But this will fail with an error. Apparently, the given listener is not stored in the 'listeners' array.
             // Find the reason and fix it.
             eventEmitter.removeEventListener(service.handleEvent);
