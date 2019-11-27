@@ -308,6 +308,7 @@ describe("functions", function() {
                     // Is there a way to define a variable in a way that the code above will work?
                     // ✏️ ADD CODE HERE ✏️
 
+                    var myVariable;
                     ////////////////////////////////////////////////////////////////////
                 }
             }
