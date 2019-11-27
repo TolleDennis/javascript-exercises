@@ -175,6 +175,7 @@ describe("functions", function() {
             // If you call getContext() here, you're a cheater! :)
             // ✏️ ADD CODE HERE ✏️
 
+            getContext = getContext.bind(differentContext);
             ////////////////////////////////////////////////////////////////////
 
             const result = getContext.call(context);
