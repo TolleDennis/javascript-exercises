@@ -447,6 +447,9 @@ describe("functions", function() {
             // Can you implement a function that takes a function as an argument,
             // executes it and returns the result?
             // ✏️ ADD CODE HERE ✏️
+            function myFunction(func) {
+                return func();
+            }
 
             ////////////////////////////////////////////////////////////////////
 
