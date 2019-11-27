@@ -206,7 +206,7 @@ describe("functions", function() {
             // Is there something even stronger than .bind()?
             // Find a way to call getContext(), but with a different context than 'context'.
             // ✏️ EDIT LINE BELOW ✏️
-            const result = getContext();
+            const result = new getContext();
             ////////////////////////////////////////////////////////////////////
 
             if (result === context) {
@@ -228,6 +228,7 @@ describe("functions", function() {
                 // Unfortunately, it does not specify any parameters.
                 // Find a way to retrieve the first argument without specifying a parameter.
                 // ✏️ ADD CODE HERE ✏️
+                return arguments[0];
 
                 ////////////////////////////////////////////////////////////////////
             }
@@ -251,7 +252,7 @@ describe("functions", function() {
                 // Find a way to retrieve the number from here.
                 // You should not write any if's here. It should work for all possible numbers.
                 // ✏️ ADD CODE HERE ✏️
-
+                return arguments.length;
                 ////////////////////////////////////////////////////////////////////
             }
 
@@ -283,7 +284,7 @@ describe("functions", function() {
                 // This means that we can't change it.
                 // Is there a way to still make 'myConst' equal true here?
                 // ✏️ ADD CODE HERE ✏️
-
+                const myConst = true;
                 ////////////////////////////////////////////////////////////////////
 
                 if (myConst !== true) {
